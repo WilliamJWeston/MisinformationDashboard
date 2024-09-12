@@ -1,0 +1,5 @@
+#Folders to ignore
+Website/shop/__pycache__/
+Website/__pycache__/
+venv
+#Files to ignore
