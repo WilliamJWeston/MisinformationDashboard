@@ -1,0 +1,258 @@
+/* setting the header background*/
+.header {background-color:rgb(150, 209, 255);
+    height:105px;
+    width:100%;
+  }
+
+/* title properties*/
+.header h2 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    top: 35px;
+    left: 30px;
+    right: 30px;
+  }
+
+/*Navigation Bar CSS (Top of screen)*/
+.navbar {
+    overflow: hidden;
+    height:50px;
+    width:100%;
+    background-color:rgb(170, 218, 255);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+.navLeft{
+    float: left;
+    height: 100%;
+    display: flex;
+}
+
+* {
+    margin-top: 0;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.navRight{
+    float: right;
+    height: 100%;
+    display: flex;
+}
+
+.navbar a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color:rgb(184, 224, 255);
+    color: black;
+    text-decoration: solid;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+  }
+  
+/* Add a color to the active/current link on homepage */
+.navbar a.active {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  }
+
+
+/*Image Preview CSS(Keep for now)*/
+.image-preview{
+    width: 300px;
+    min-height: 100px;
+    border: 3px solid #ccc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: lightgray;
+}
+
+.image-preview__image {
+    display: none;
+    width: 100%;
+}
+
+select{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+select:hover{
+    border: 3px solid #555;
+}
+
+input[type=text], input[type=number], input[type=password]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    border: 3px solid #555;
+  }
+
+  
+input[type=submit],.datepicker{
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: rgb (170, 218, 255);
+}
+
+input[type=submit]:hover{
+    background-color: rgb(200, 231, 255);
+    border: 3px solid #555;
+}
+
+input[type=file]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: rgb(200, 231, 255);
+}
+
+
+/*   COMPARE TOOL CSS   */
+
+.form-group-lefthandside{
+    flex-direction: column;
+    width: 15%;
+    min-width: 300px;
+    height: 100%;
+}
+
+.group-righthandside{
+    width: 75%;
+    height: 100%;
+    float: right;
+}
+
+.organizer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/*If screen is smaller than 750px*/
+@media all and (max-width: 1200px) {
+
+    .form-group-lefthandside{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 60px;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .form-group-lefthandside > input,select{
+        width: 20%;
+    }
+    .group-righthandside{
+        width: 100%;
+        height: 100%;
+    }
+    .organizer{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    }
+
+
+
+/*   Flashbar CSS (needs changing)   */
+
+#flashbar{
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+#flashbar ul{
+    list-style-type: none;
+}
+
+body {
+    padding: 0;
+    margin:0;
+}
+
+#content {
+    padding: 8px;
+    height: 100vh;
+    width: 95vw;
+    flex-wrap: nowrap;
+}
+
+/*HOME PAGE*/
+
+.homeContent{
+    width: 100%;
+}
+
+.containerDiv{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+}
+

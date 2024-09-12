@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+        
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <h2>Last 30 Days of Activity</h2>
+
+  <div class="organizer">
+
+    <div class="form-group-lefthandside"> 
+      <form action="{{url_for('home')}}" method="POST">
+        {{ form.csrf_token }}
+        {{ form.Cats }}
+        {{ form.homeSubmit }}
+      </form>
+    </div>
+
+    <div class="group-righthandside">
+      <head>
+          <script type="text/javascript">
+              google.charts.load('current', {'packages':['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+
+              $(window).resize(function(){
+                  drawChart();
+                  document.write
+              });
+
+              function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                      // DATA
+                      ['Year', '{{Cat}}'],
+                      {% for Date,Score in packed %}
+                      ["{{Date}}",{{Score}}],
+                      {% endfor %}
+                      ]);
+
+                      // OPTIONS
+                      var options = {
+                      title: '{{cat1}}',
+                      legend: { position: 'bottom' },
+                      vAxis: { scaleType: 'log'}
+                      };
+              
+                  // MAKE AND DRAW
+                  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                  chart.draw(data, options);
+
+              }
+
+          </script>
+
+      </head>
+
+      <body>
+          <div id="curve_chart" style="height: 70%;width: 100%;"></div>
+      </body>
+
+    </div>
+  </div>
+
+
+
+
+{% endblock content %}

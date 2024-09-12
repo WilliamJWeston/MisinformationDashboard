@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Date Selector Tool</h1>
+<div class="organiser">
+<div class="form-group-lefthandside"> 
+    <form action="{{url_for('wordcloud')}}" method="POST">
+        {{ form.csrf_token }}
+        {{ form.CatAll }}
+        {{ form.cloudSubmit }}
+    </form>
+</div>
+
+<div class="group-righthandside">
+        <img src="./static/wordclouds/{{chosenTitle}}">
+</div>
+</div>
+
+
+{% endblock content %}
